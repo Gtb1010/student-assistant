@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.env
+chroma_store/
+user_data/
+chat_histories/
+personal_docs/
+data/Finance/*.pdf
+data/Informatike_Biznesi/*.pdf
+.DS_Store
