@@ -187,8 +187,7 @@ button[kind="header"] svg,
 }
 /* ── Chat input send arrow ── */
 [data-testid="stChatInput"] button svg,
-[data-testid="stChatInputSubmitButton"] svg,
-.stChatInput button svg {
+[data-testid="stChatInputSubmitButton"] {
   fill: #ffffff !important;
   color: #ffffff !important;
 }
