@@ -14,7 +14,11 @@ INFORMATIKE_DIR   = DATA_DIR / "Informatike_Biznesi"
 PERSONAL_DOCS_DIR = BASE_DIR / "personal_docs"
 CHAT_HISTORY_DIR  = BASE_DIR / "chat_histories"
 USER_DATA_DIR     = BASE_DIR / "user_data"
-CHROMA_DIR        = Path("/Users/test/chroma_store")
+# Checks if your local Mac path exists. If not, it uses a safe cloud path.
+if Path("/Users/test").exists():
+    CHROMA_DIR = Path("/Users/test/chroma_store")
+else:
+    CHROMA_DIR = BASE_DIR / "chroma_store"
 
 for _d in [FINANCE_DIR, INFORMATIKE_DIR, PERSONAL_DOCS_DIR,
            CHAT_HISTORY_DIR, USER_DATA_DIR, CHROMA_DIR]:
