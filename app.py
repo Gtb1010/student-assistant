@@ -105,7 +105,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   border: 1px solid rgba(26,58,92,0.12);
   box-shadow: 0 2px 10px rgba(0,0,0,0.06); margin-bottom: 12px;
 }
-/* ── Auth cards ── */
 .auth-card {
   background: #fff;
   border-radius: 16px;
@@ -114,7 +113,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   border-top: 4px solid var(--gold);
 }
-/* ── Dashboard cards ── */
 .stat-card {
   background: #fff;
   border-radius: 12px;
@@ -157,7 +155,10 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--navy); }
   border: none !important; border-radius: 8px !important;
   font-weight: 600 !important; transition: 0.2s !important;
 }
+.stButton > button * { color: #ffffff !important; }
 .stButton > button:hover { background: var(--gold) !important; color: var(--navy) !important; }
+.stButton > button:hover,
+.stButton > button:hover * { color: var(--navy) !important; }
 [data-testid="stMetricValue"] {
   color: var(--gold) !important;
   font-family: 'Playfair Display', serif !important;
@@ -169,9 +170,43 @@ input[type="text"], input[type="password"], textarea,
 [data-baseweb="textarea"] textarea { color: #ffffff !important; caret-color: #ffffff !important; }
 [data-testid="stExpander"] * { color: #000000 !important; }
 .stMarkdown p, .stMarkdown div { color: #000000 !important; }
-[data-testid="stFileUploader"] *,
 [data-baseweb="select"] *,
 [data-testid="stSelectbox"] * { color: #ffffff !important; }
+/* ── File uploader: label dark, internal button white ── */
+[data-testid="stFileUploader"] * { color: #000000 !important; }
+[data-testid="stFileUploader"] button,
+[data-testid="stFileUploader"] button * { color: #ffffff !important; }
+/* ── Sidebar SVGs (collapse arrow, X close) always white ── */
+[data-testid="stSidebar"] svg { fill: var(--cream) !important; }
+[data-testid="collapsedControl"] svg,
+[data-testid="baseButton-headerNoPadding"] svg,
+button[kind="header"] svg,
+[data-testid="stSidebarCollapseButton"] svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+/* ── Chat input send arrow ── */
+[data-testid="stChatInput"] button svg,
+[data-testid="stChatInputSubmitButton"] svg,
+.stChatInput button svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+/* ── "New Chat" button column ── */
+[data-testid="column"] .stButton > button,
+[data-testid="column"] .stButton > button span,
+[data-testid="column"] .stButton > button p { 
+  color: #ffffff !important; 
+}
+
+button[kind="primary"], button[kind="secondary"],
+button[kind="primary"] *, button[kind="secondary"] *,
+.stButton button, .stButton button span, .stButton button p,
+div[data-testid] .stButton > button,
+div[data-testid] .stButton > button * {
+  color: #ffffff !important;
+}
+
 /* ── Link-style secondary button ── */
 .link-btn {
   background: none !important;
